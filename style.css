@@ -1,93 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --primary-color: #2e8b57; /* Cor verde principal */
-    --secondary-color: #ffffff; /* Cor branca */
-    --accent-color: #ffcc00; /* Cor de destaque (amarelo claro) */
-    --bg-color: #f0f4f3; /* Fundo suave */
-    --font-family: 'Poppins', sans-serif;
+    --bg-color: #0b2d16; /* Cor de fundo */
+    --primary-color: #DDDDDD; /* Cor primária */
+    --secondary-color: #7aef7a; /* Cor secundária */
+    --font: "Nunito Sans", sans-serif; /* Fonte utilizada */
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--primary-color);
+    background-color: var(--bg-color); /* Aplica a cor de fundo */
+    color: var(--primary-color); /* Aplica a cor do texto */
+    font-family: var(--font); /* Aplica a fonte */
+    height: 100vh; /* Altura da tela */
+    margin: 0; /* Remove margens padrão */
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    background-color: var(--primary-color); /* Cor de fundo do cabeçalho */
+    text-align: center; /* Centraliza o texto */
+    padding: 1px; /* Espaçamento interno */
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
+h1 {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: var(--bg-color); /* Cor do título */
+    font-weight: 700; /* Peso da fonte do título */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+nav {
+    display: flex; /* Usar flexbox para o layout */
+    justify-content: center; /* Centraliza os itens */
+    font-weight: 400; /* Peso da fonte do nav */
 }
 
-nav ul li {
-    font-size: 1.2rem;
+nav a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--bg-color); /* Cor dos links */
+    margin: 0 2rem 1rem 0rem; /* Espaçamento dos links */
+    font-size: 1.2rem; /* Tamanho da fonte dos links */
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--accent-color);
-}
-
-main {
-    padding: 2rem;
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.intro h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.intro p {
-    font-size: 1.2rem;
-    color: var(--primary-color);
+nav a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+    transform: scale(0.90); /* Efeito de escala ao passar o mouse */
+    transition: transform 0.1s; /* Transição suave */
 }
 
 .graficos-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    margin: 5rem; /* Margem ao redor da área de gráficos */
+    padding-bottom: 4rem; /* Espaçamento inferior para evitar sobreposição */
+}
+
+.grafico {
+    margin-top: 3rem; /* Margem superior para os gráficos */
+    margin-bottom: 4rem; /* Margem inferior para evitar sobreposição */
+}
+
+.graficos-container__texto {
+    font-size: 1.3rem; /* Tamanho da fonte do texto descritivo */
+    text-align: center; /* Centraliza o texto */
+    padding: 2rem; /* Espaçamento interno */
+    border: var(--secondary-color) solid 2px; /* Borda ao redor do texto */
+}
+
+span {
+    font-weight: bold; /* Destaca o texto em negrito */
+    color: var(--secondary-color); /* Cor para o span */
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
+    display: flex; /* Usar flexbox para o rodapé */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza o conteúdo */
+    background-color: var(--primary-color); /* Cor de fundo do rodapé */
+    color: var(--bg-color); /* Cor do texto no rodapé */
+    width: 100%; /* Largura total */
+    height: 3rem; /* Altura do rodapé */
+    margin-top: 2rem; /* Margem superior para o rodapé */
+    position: relative; /* Mantém a posição relativa */
+    z-index: 1; /* Para garantir que fique acima de outros elementos se necessário */
 }
